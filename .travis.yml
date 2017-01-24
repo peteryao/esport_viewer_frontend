@@ -1,24 +1,19 @@
-#.travis.yml
-
 language: node_js
 node_js:
-  - "5.11"
-
+- '5.11'
 branches:
   only:
-    - master
-
+  - master
 before_script:
-  - npm install -g firebase-tools
-  - npm install -g angular-cli
-
+- npm install -g firebase-tools
+- npm install -g angular-cli
 script:
-  - ng build --prod
-
+- ng build --prod
 after_success:
-  - firebase deploy --token $FIREBASE_TOKEN
-
+- firebase deploy --token $FIREBASE_TOKEN
 notifications:
   email:
     on_failure: change
     on_success: change
+  slack:
+    secure: hj9oQn3WyhSFGEpVi0kRIzAuEq2m7Ma3ZThWCIbMqJ5sT6TTafecof+tTTSmyhtvyuvp3gOSlPY4UjRZK93kWxzjZWTx94zO+dhg45OIbJuMINyXNXiShF0lsyAf+mZXqI3g8/DG5c+tKGIHIDJtdnpGCPvyNwym2KO5N3ORpK+dB7vkRAEQdILF0b2CQ6MjCE65T9p1Luhz3LKLCxNhXpOLuiJTqwW36r8nxzxKaPR+kx8qF/7GqNai/HcJ825Wpo2hxSCShpogSEikqvWt0Sh3wpytInUbLxxLKtw6SMvdWE4Wf97bubmzEmIhP4jzLoou1RyboehD7Oc8TVVtaQ6AvPZ6gXHasvhqLjG70Eg/7JUT2T/QCZlAwczBVgCmXviccBiFag3z4eTMlbKSAbGD1WB65a2PVh2yLaFnDiXX5BxmnKoHVKCiM02TLzvytMTQ34Fgt8DdpNYcf861SLEMon/Lxut1Zqqg0/nysR/dIVLlLZy9WRoTywvdHhxPxN2qhTNQNdb0b/v7CK9JtfV3o1hRp4b7ZmlYyYaDQet+dTQqm7dx6pI6R3JTYW+s+kHbQcOX2thQqNQMo5bw7IQKwxHLD/Hazu0e0B245wNQeTS5PQYqQd2IgyLHMJdUnlqXvSYmDS6bNCetiQyq27i2s4rhgRsS8foiuZw6PYY=
