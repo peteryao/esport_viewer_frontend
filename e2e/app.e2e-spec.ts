@@ -7,8 +7,8 @@ describe('ev-front App', function() {
     page = new EvFrontPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display a topnav bar saying esport viewer', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('esport viewer');
   });
 });
