@@ -8,15 +8,14 @@
   background-color: #00a087;
 }
  .search-result {
-   margin-top: 70px;
+   margin-top: 50px;
    z-index: 0;
  }
 
  .sidebar {
    position: fixed;
    width: 20%;
-   height: 400px;
-   background: #000;
+   height: 100%;
  }
 
  .content {
